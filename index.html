@@ -37,13 +37,10 @@
             </button>
             <a class="navbar-brand" href="#">Holiday Radar<!--<img src="img/logo-wide.png" alt="Holiday Radar" width="130px">--></a>
           </div>
-          <div class="navbar-collapse collapse">
+          <div class="navbar">
             <ul class="nav navbar-nav navbar-right">
-              <li><a href="#" title="Home">Get Notified</a></li>
-              <li><a href="#app" title="Home">App</a></li>
-              <li><a href="#team" title="Home">Team</a></li>
-              <li><a href="https://www.facebook.com/pages/Gymy/655129387924891" target="_blank" title="Like us on Facebook"><i class="fa fa-facebook"></i></a></li>
-              <li><a href="https://twitter.com/gymyco" target="_blank" title="Follow us on Twitter"><i class="fa fa-twitter"></i></a></li>
+              <li><a href="https://www.facebook.com/" target="_blank" title="Like us on Facebook"><i class="fa fa-facebook"></i></a></li>
+              <li><a href="https://twitter.com/" target="_blank" title="Follow us on Twitter"><i class="fa fa-twitter"></i></a></li>
             </ul>
           </div><!--/.nav-collapse -->
         </div>
@@ -57,7 +54,7 @@
         <div class="row">
           <div class="col-md-8 col-md-offset-2 text-center">
             <h1>Holiday Radar</h1>
-            <h2>Check up a potential destination or let us suggest a place for you based on your social media profile.</h2>
+            <h2>Check out a potential destination or let us suggest a place for you based on your social media profile</h2>
           </div>
         </div>
       </div>
@@ -72,20 +69,20 @@
 
 
               <div class="btn-group" data-toggle="buttons">
-                <button id="user_trigger" type="radio" class="btn btn-large btn-warning active">I know where I am going</button>
-                <button id="gym_trigger" type="radio" class="btn btn-large btn-warning">Suggest me a place</button>
+                <button id="know_trigger" type="radio" class="btn btn-large active">I know where I am going</button>
+                <button id="unknow_trigger" type="radio" class="btn btn-large">Suggest me a place</button>
               </div>
 
               <div id="user-signup">
                 <p style="margin-bottom:30px"></p>
                 
-                <form action="http://marketing.identitysquare.com/t/i/s/jthrjr/" method="post" target="_blank">
+                <form>
                   <div class="row">
                     <div class="col-md-8 col-md-offset-2">
                       <div class="input-group">
-                      <input type="text" class="form-control" name="cm-jthrjr-jthrjr" placeholder="Enter Your Email Address">
+                      <input type="text" class="form-control" name="cm-jthrjr-jthrjr" placeholder="Enter Your Destination">
                       <span class="input-group-btn">
-                        <button class="btn btn-wesavvy grad" type="submit">Get Notified</button>
+                        <button class="btn btn-wesavvy grad" type="submit">Look Up</button>
                       </span>
                     </div>
                     </div>
@@ -94,15 +91,14 @@
               </div>
 
               <div id="gyms-signup" style="display:none">
-                <p style="margin-bottom:30px">Regigster your interests with us and receive a free market research backed by data</p>
+                <!--<p style="margin-bottom:30px">Log in to your social media account to receive tailored suggestions</p>-->
                 
-                <form action="http://marketing.identitysquare.com/t/i/s/jthryh/" method="post" target="_blank">
+                <form>
                   <div class="row">
                     <div class="col-md-8 col-md-offset-2">
-                      <div class="input-group">
-                      <input type="text" class="form-control" name="cm-jthryh-jthryh" placeholder="Enter Your Work Email Address">
+                      <div class="input-group" style="margin-top:50px">
                       <span class="input-group-btn">
-                        <button class="btn btn-wesavvy grad" type="submit">Request Invite</button>
+                        <button class="btn btn-wesavvy grad" type="submit">Suggest me a place</button>
                       </span>
                     </div>
                     </div>
@@ -125,21 +121,24 @@
       <div class="container">
         <div class="row">
           <div class="col-md-12">
-            
-            <img src="img/logos/startupweekend.png" alt="Startup Weekend" />
-            <img src="img/logos/google.png" alt="Google" />
-            <img src="img/logos/co.png" alt=".co" />
-            <img src="img/logos/c2.png" alt="C2" />
-            <img src="img/logos/profitness.png" alt="Pro Fitness" />
-
-
-
+            <div class="col-md-3">
+              <img src="img/logos/tnooz.png" alt="Tnooz" />
+            </div>
+            <div class="col-md-3">
+              <img src="img/logos/hotelbeds.png" alt="HotelBeds" />
+            </div>
+            <div class="col-md-3">
+              <img src="img/logos/skyscanner2.png" alt="SkyScanner" />
+            </div>
+            <div>
+              <img src="img/logos/ndrc.png" alt="NDRC" />
+            </div>
           </div>
         </div>
       </div>
     </section>
 
-
+<!--
     <section id="app">
       <div class="container">
         <div class="row">
@@ -158,9 +157,9 @@
         </div>
       </div>
     </section>
-    
+-->    
 
-
+<!--
     <section id="team">
       <div class="container">
         <div class="row">
@@ -315,16 +314,16 @@
         </div>
       </div>
     </section>
+-->    
     
     
     
-    
-    <!-- #how-we-do-it >>>>> --
+<!--
     <section id="reasons">
       <div class="container">
         <div class="row">
           <div class="col-md-12 text-center" style="margin-bottom:10px">
-            <h2>Reasons why you have to experience GYMY</h2>
+            <h2>Reasons why you have to experience Holiday Radar</h2>
           </div>
           <div class="col-md-6 col-md-offset-3 text-center" style="margin-bottom:50px;">
             <p>We simplify insurance and personalise our service to cater for your goals.</p>
@@ -352,14 +351,14 @@
         </div>
       </div>
     </section>
-    <!-- #how-we-do-it <<<<< -->
+-->
     
     
     
     <!-- footer >>>>> -->
     <footer id="footer" class="grad">
     
-      <div id="footer-content">
+      <!--<div id="footer-content">
         <div class="container">
           <div class="row">
             <div class="col-md-12 col-md-offset text-center">
@@ -367,13 +366,13 @@
             </div>
           </div>
         </div>
-      </div>
+      </div>-->
       
       <div id="footer-copy">
         <div class="container">
           <div class="row">
             <div class="col-md-12 text-center">
-              <small>Copyright GYMY 2015.</small>
+              <small>Copyright Holiday Radar 2015.</small>
             </div>
           </div>
         </div>
@@ -398,14 +397,14 @@
         }
 
         // User click trigger
-        $('#user_trigger').click(function() {
-          $('#gym_trigger').removeClass('active');
+        $('#know_trigger').click(function() {
+          $('#unknow_trigger').removeClass('active');
           $('#gyms-signup').fadeOut(function(){
             $('#user-signup').fadeIn();
           });
         });
-        $('#gym_trigger').click(function() {
-          $('#user_trigger').removeClass('active');
+        $('#unknow_trigger').click(function() {
+          $('#know_trigger').removeClass('active');
           $('#user-signup').fadeOut(function(){
             $('#gyms-signup').fadeIn();
           });

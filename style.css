@@ -1,18 +1,19 @@
 
+/*
 @import url(http://fonts.googleapis.com/css?family=Nunito);
 @import url(http://fonts.googleapis.com/css?family=Open+Sans);
-
+*/
 
 
 body {
   background: #F8F9FB;
-  font-family: 'Open Sans', sans-serif;
+  font-family: 'helvetica', 'arial', sans-serif;
   font-size: 12px;
   -webkit-font-smoothing: subpixel-antialiased;
 }
 
 h1, h2, h3, h4, h5, h6 {
-  font-family: 'Nunito', sans-serif;
+  font-family: 'helvetica', 'arial', sans-serif;
 }
 
 
@@ -22,9 +23,9 @@ h1, h2, h3, h4, h5, h6 {
 #top, #top .navbar {
   /*background: #252934;*/
 
-  color: white;
-  -webkit-box-shadow: 0 1px 3px rgba(0,0,0,0.15),0 0 0 1px rgba(0,0,0,0.05);
-  box-shadow: 0 1px 3px rgba(0,0,0,0.15),0 0 0 1px rgba(0,0,0,0.05);
+  color: transparent;
+/*  -webkit-box-shadow: 0 1px 3px rgba(0,0,0,0.15),0 0 0 1px rgba(0,0,0,0.05);
+  box-shadow: 0 1px 3px rgba(0,0,0,0.15),0 0 0 1px rgba(0,0,0,0.05);*/
 }
 
 #top .navbar-brand {
@@ -125,7 +126,9 @@ h1, h2, h3, h4, h5, h6 {
   margin-bottom: 0px;
 }
 
-
+#know_trigger, #unknow_trigger{
+  background-color:#1291C8;
+}
 
 /* General homepage section styles */
 section {
@@ -313,8 +316,10 @@ section {
 
 
 /* uigradients */
-.grad, #app {
 
+.grad, #app {
+  background-color:#1291C8;
+/*
   background-image: -webkit-gradient(
     linear,
     right top,
@@ -326,6 +331,10 @@ section {
   background-image: -moz-linear-gradient(right top, #F05143 0%, #FCC46B 100%) !important;
   background-image: -webkit-linear-gradient(right top, #F05143 0%, #FCC46B 100%) !important;
   background-image: -ms-linear-gradient(right top, #F05143 0%, #FCC46B 100%) !important;
-  background-image: linear-gradient(to right top, #F05143 0%, #FCC46B 100%) !important;
-        
+  background-image: linear-gradient(to right top, #F05143 0%, #FCC46B 100%) !important;       
+*/
+}
+
+.navbar{
+  background-color:transparent;
 }
