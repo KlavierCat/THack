@@ -1,0 +1,331 @@
+
+@import url(http://fonts.googleapis.com/css?family=Nunito);
+@import url(http://fonts.googleapis.com/css?family=Open+Sans);
+
+
+
+body {
+  background: #F8F9FB;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 12px;
+  -webkit-font-smoothing: subpixel-antialiased;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Nunito', sans-serif;
+}
+
+
+
+/* >>>> header >>>> */
+
+#top, #top .navbar {
+  /*background: #252934;*/
+
+  color: white;
+  -webkit-box-shadow: 0 1px 3px rgba(0,0,0,0.15),0 0 0 1px rgba(0,0,0,0.05);
+  box-shadow: 0 1px 3px rgba(0,0,0,0.15),0 0 0 1px rgba(0,0,0,0.05);
+}
+
+#top .navbar-brand {
+  margin-top: -7px;
+  margin-right: 10px;
+}
+
+#top .navbar {
+  border-bottom: 0px;
+  text-shadow: none;
+}
+
+#top .navbar li a {
+  text-shadow: none;
+}
+
+#top .navbar-nav > li {
+  margin-right: 10px;
+}
+
+#top .navbar-right > li {
+  margin-right: 0px;
+  margin-left: 10px;
+}
+
+
+
+#top .navbar-nav > li > a {
+  color: rgba(255,255,255,0.8);
+}
+
+
+#top .navbar li a:hover {
+  color: rgba(255,255,255,1);
+}
+
+#top .navbar-nav > .active > a, #top .navbar-nav > li > a:hover, #top .navbar-default .navbar-nav>.open>a, #top .navbar-default .navbar-nav>.open>a:hover, #top .navbar-default .navbar-nav>.open>a:focus {
+  background: rgba(0,0,0,0.2);
+}
+
+#top .navbar-nav>li>.dropdown-menu {
+  border-top: 2px solid #C3591C;
+  font-size: 12px;
+}
+
+#top .dropdown-menu>li>a:hover, #top .dropdown-menu>li>a:focus {
+  background: #C0571C;
+}
+
+#top a:hover, #top-main ul li:hover a {
+  color: rgba(255,255,255,1);
+}
+
+#top-main {
+  padding: 0px;
+}
+
+#logo {
+  margin-top: 0px;
+  margin-bottom: 0px;
+  padding: 5px;
+}
+
+#top-main ul {
+  margin-bottom: 0px;
+  font-family: 'Nixie One', cursive;
+}
+
+#top-main ul li {
+  padding: 18px;
+  margin: 0px;
+  background: transparent;
+  cursor: pointer;
+}
+
+#top-main ul li:hover {
+  background: rgba(0,0,0,0.2);
+}
+
+#top-menu li, #login-menu li {
+  color: #6f7c82;
+  font-weight: bold;
+  margin: 0 20px;
+  margin-top: 10px;
+}
+
+#top-menu li a:hover, #login-menu li a:hover {
+  text-decoration: none;
+}
+
+#login-menu {
+  margin-bottom: 0px;
+}
+
+#login-menu li {
+  margin-right: 0px;
+  margin-top: 6px;
+  margin-bottom: 0px;
+}
+
+
+
+/* General homepage section styles */
+section {
+  padding: 50px 0;
+  position: relative;
+  z-index: 99;
+}
+
+#footer {
+  position: relative;
+  z-index: 99;
+}
+
+
+
+/* >>>>> #home-image >>>>> */
+
+#home-image {
+  background: #1a1a1a;
+  color: white;
+  padding: 160px 0;
+  
+  background: url(img/stock/laptop-google-bg.jpg) no-repeat center center fixed; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;;
+}
+
+#home-image.video {
+  background: rgba(25,25,25,0.7);
+}
+
+#home-image h1 {
+  line-height: 60px;
+  font-weight: 800;
+}
+
+#home-image h3 {
+  line-height: 30px;
+  margin-top: 20px;
+  font-size: 14px;
+}
+
+
+.btn-wesavvy {
+  background: #FC5F45;
+  color: white;
+}
+
+#signup form {
+  margin-bottom: 30px;
+}
+
+#signup {
+  margin: 0px;
+  margin-top: 80px;
+  margin-bottom: -160px;
+  background: rgba(34,34,34,0.4);
+}
+
+#signup form input {
+  padding: 25px;
+  border: 0px !important;
+}
+
+#signup form .btn {
+  border: 0px !important;
+  padding: 15px 40px;
+}
+
+#signup form .btn:hover {
+  border: 0px !important;
+  color: white;
+}
+
+#signup p {
+  margin-top: 50px;
+  line-height: 25px;
+  font-size: 12px;
+  color: rgba(255,255,255,0.6);
+}
+
+
+
+
+/* >>>>> Homepage #how-we-do-it >>>>> */
+
+#reasons {
+  color: #2E3037;
+  background: #EFF1F5;
+  padding: 100px 0;
+}
+
+#reasons h2 {
+  margin-bottom: 40px;
+}
+
+#reasons p, #reasons q {
+  font-size: 14px;
+  line-height: 30px;
+  margin-bottom: 30px;
+  margin-top: 20px;
+}
+
+#reasons blockquote p {
+  margin-bottom: 10px;
+}
+
+#reasons blockquote {
+  border: 2px solid rgba(53,53,53,0.05);
+  padding-bottom: 25px;
+  color: gray;
+}
+
+
+/* >>>>> logos >>>>> */
+
+#logos {
+  background: rgba(255, 255, 255, 0.9);
+
+  /*background: url('img/bg/gym1.jpg') no-repeat center center fixed; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;*/
+}
+
+#logos img {
+  height: 80px;
+  margin: 10px;
+
+  filter: url("data:image/svg+xml;utf8,<svg xmlns=\'http://www.w3.org/2000/svg\'><filter id=\'grayscale\'><feColorMatrix type=\'matrix\' values=\'0.3333 0.3333 0.3333 0 0 0.3333 0.3333 0.3333 0 0 0.3333 0.3333 0.3333 0 0 0 0 0 1 0\'/></filter></svg>#grayscale"); /* Firefox 3.5+ */
+  filter: gray; /* IE6-9 */
+  -webkit-filter: grayscale(100%); /* Chrome 19+ & Safari 6+ */
+}
+
+#logos img:hover {
+  filter: none;
+  -webkit-filter: grayscale(0%);
+}
+
+
+
+/* >>>>> team >>>>> */
+
+#team {
+  background: white;
+}
+
+#team .col-md-4 {
+  margin-bottom: 20px;
+}
+
+
+
+/* >>>>> footer >>>>> */
+#footer {
+  color: white;
+  /*background: #FC5F45;*/
+        
+}
+
+#footer-content {
+  padding: 80px 0;
+  color: rgba(255,255,255,0.9);
+}
+
+#footer-content h4 {
+  line-height: 40px;
+}
+
+#footer-copy {
+  background: #252934;
+  padding: 20px 0;
+  text-align: justify;
+}
+
+#footer-copy small {
+  font-size: 10px;
+  color: rgba(255,255,255,0.50);
+}
+
+
+
+
+/* uigradients */
+.grad, #app {
+
+  background-image: -webkit-gradient(
+    linear,
+    right top,
+    right top,
+    color-stop(0, #F05143),
+    color-stop(1, #FCC46B)
+  ) !important;
+  background-image: -o-linear-gradient(right top, #F05143 0%, #FCC46B 100%) !important;
+  background-image: -moz-linear-gradient(right top, #F05143 0%, #FCC46B 100%) !important;
+  background-image: -webkit-linear-gradient(right top, #F05143 0%, #FCC46B 100%) !important;
+  background-image: -ms-linear-gradient(right top, #F05143 0%, #FCC46B 100%) !important;
+  background-image: linear-gradient(to right top, #F05143 0%, #FCC46B 100%) !important;
+        
+}

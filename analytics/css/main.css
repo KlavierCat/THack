@@ -1,0 +1,31 @@
+
+
+/* ==========================================================================
+   Author's custom styles
+   ========================================================================== */
+
+#visualisation-container{
+	margin-top:35px;
+}
+
+h2{
+	margin-left:35px;
+}
+
+.nav-pills>li.active>a, .nav-pills>li.active>a:hover, .nav-pills>li.active>a:focus{
+	background-color: #f15e48;
+}
+
+a, a:hover{
+	color:#f15e48;
+}
+
+
+
+
+
+
+
+
+
+

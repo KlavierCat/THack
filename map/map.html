@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>GYMY.CO</title>
+
+    <link rel="shortcut icon" href="../img/icon.png">
+
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+    <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css"> -->
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="../style.css?v=0.01">
+
+  <style>
+    html, body{ height:100%;}
+    #map-canvas {
+        height: 100%;
+        width: 100%;
+        padding: 0px;
+        margin: 0px; }
+  </style>
+</head>
+
+<body>
+    <!-- >>>>> header >>>>> -->
+    <header id="top" role="banner">      
+      <div class="navbar navbar-default navbar-fixed-top grad" role="navigation">
+        <div class="container">
+          <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target=".navbar-collapse">
+              <span class="sr-only">Toggle navigation</span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="../"><img src="../img/logo-wide.png" alt="GYMY" width="130px"></a>
+          </div>
+          <div class="navbar-collapse collapse">
+            <ul class="nav navbar-nav navbar-right">
+              <li><a href="#" title="Home">Get Notified</a></li>
+              <li><a href="#app" title="Home">App</a></li>
+              <li><a href="#team" title="Home">Team</a></li>
+              <li><a href="https://www.facebook.com/pages/Gymy/655129387924891" target="_blank" title="Like us on Facebook"><i class="fa fa-facebook"></i></a></li>
+              <li><a href="https://twitter.com/gymyco" target="_blank" title="Follow us on Twitter"><i class="fa fa-twitter"></i></a></li>
+            </ul>
+          </div><!--/.nav-collapse -->
+        </div>
+      </div>
+    </header>
+    <!-- <<<<< header <<<<< -->
+
+    <section style="height:100%; padding:0px; padding-top:50px;">
+      <div id="map-canvas"></div>
+    </section>
+
+    <!-- footer >>>>> -->
+    <footer id="footer" class="grad">
+      
+      <div id="footer-copy">
+        <div class="container">
+          <div class="row">
+            <div class="col-md-12 text-center">
+              <small>Copyright GYMY 2015.</small>
+            </div>
+          </div>
+        </div>
+      </div>
+    
+    </footer>
+    <!-- footer <<<<< -->
+    
+    
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+    <script src="../js/tubular.js"></script>
+    
+    <script>
+      jQuery(function ($) {
+        // if movile device
+        if( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ) {
+         // some code..
+        } else {
+          $('#home-image').addClass('video');
+          $('#home-image').tubular({videoId: 'sZ4NH5phUZs', start:57});
+        }
+
+        // User click trigger
+        $('#user_trigger').click(function() {
+          $('#gym_trigger').removeClass('active');
+          $('#gyms-signup').fadeOut(function(){
+            $('#user-signup').fadeIn();
+          });
+        });
+        $('#gym_trigger').click(function() {
+          $('#user_trigger').removeClass('active');
+          $('#user-signup').fadeOut(function(){
+            $('#gyms-signup').fadeIn();
+          });
+        });
+
+      });
+    </script>
+
+</body>
+
+<script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA5Ck2xZhme7e51NC-hms4fqg0RsbAgiUs">
+</script>
+
+<script type="text/javascript">
+
+          var myCenter=new google.maps.LatLng(53.349381, -6.263025);
+
+          var pickUpPoints =  [
+            ["Ben Dunne Gym Carlisle", 53.3141678,-6.3031188, 1, 'mapIcon_1.png'],
+            ["Church Fitness Dun Laoghaire", 53.2925857,-6.136111, 2, 'mapIcon_1.png'],
+            ["Energie fitness Rathfarnham", 53.2899691,-6.2652004, 3, 'mapIcon_1.png'],
+            ["Educo Gym", 53.3460511,-6.252725, 4, 'mapIcon_1.png'],
+            ["West Wood Club", 53.3238581,-6.2168589, 5, 'mapIcon_1.png'],
+            ["Raw Condition Gym", 53.3321112,-6.2643233, 6, 'mapIcon_1.png'],
+            ["FLYEfit Gym Ranelagh", 53.3386826,-6.2600935, 7, 'mapIcon_1.png'],
+            ["Phibsboro Gym", 53.3746436,-6.3028371, 8, 'mapIcon_1.png'],
+            ["ABS Gym Conditioning Centre", 53.3746436,-6.3028371, 9, 'mapIcon_1.png'],
+            ["Ben Dunne Gym Northwood", 53.3746436,-6.3028371, 10, 'mapIcon_1.png'],
+            ["1escape Health Club", 53.3746436,-6.3028371, 11, 'mapIcon_1.png']
+          ];
+
+          function setMarkers(map, pickUpPoints){
+            for (var i=0; i<pickUpPoints.length; i++){
+              var pickUpPoint = pickUpPoints[i];
+              var myLatLng = new google.maps.LatLng(pickUpPoint[1],pickUpPoint[2]);
+              var image = {
+                url:'img/' + pickUpPoint[4],
+                size: new google.maps.Size(40,36),
+                origin: new google.maps.Point(0,0),
+                anchor: new google.maps.Point(18,40)
+              }
+              var marker = new google.maps.Marker({
+                position:myLatLng,
+                map:map,
+                icon:image,
+                title:pickUpPoint[0],
+                zIndex:pickUpPoint[3]
+              });
+            }
+          }
+
+          function initialize() {
+          	var styles =[
+          		{
+			        "stylers": [
+			            {
+			                "hue": "#dd0d0d"
+			            }
+			        ]
+			    },
+			    {
+			        "featureType": "road",
+			        "elementType": "labels",
+			        "stylers": [
+			            {
+			                "visibility": "off"
+			            }
+			        ]
+			    },
+			    {
+			        "featureType": "road",
+			        "elementType": "geometry",
+			        "stylers": [
+			            {
+			                "lightness": 100
+			            },
+			            {
+			                "visibility": "simplified"
+			            }
+			        ]
+			    }
+          	];
+
+          	var styledMap = new google.maps.StyledMapType(styles,
+            		{name: "Styled Map"});
+
+            var mapProp = {
+                center:myCenter,
+                zoom: 12,
+                draggable: true,
+                scrollwheel: false,
+                mapTypeControlOptions:{
+                	mapTypeIds:[google.maps.MapTypeId.ROADMAP, 'map_style']
+            	}
+        	};
+
+            var map=new google.maps.Map(document.getElementById("map-canvas"),mapProp);
+
+            map.mapTypes.set('map_style', styledMap);
+            map.setMapTypeId('map_style');
+
+            setMarkers(map, pickUpPoints);
+
+          };
+
+          initialize();      
+        </script>
+
+</html>
