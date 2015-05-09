@@ -322,10 +322,10 @@ section {
     color-stop(0, #F05143),
     color-stop(1, #FCC46B)
   ) !important;
-  background-image: -o-linear-gradient(right top, #F05143 0%, #FCC46B 100%) !important;
-  background-image: -moz-linear-gradient(right top, #F05143 0%, #FCC46B 100%) !important;
-  background-image: -webkit-linear-gradient(right top, #F05143 0%, #FCC46B 100%) !important;
-  background-image: -ms-linear-gradient(right top, #F05143 0%, #FCC46B 100%) !important;
-  background-image: linear-gradient(to right top, #F05143 0%, #FCC46B 100%) !important;
+  background-image: -o-linear-gradient(right top, #4345F0 0%, #6BD0FC 100%) !important;
+  background-image: -moz-linear-gradient(right top, #4345F0 0%, #6BD0FC 100%) !important;
+  background-image: -webkit-linear-gradient(right top, #4345F0 0%, #6BD0FC 100%) !important;
+  background-image: -ms-linear-gradient(right top, #4345F0 0%, #6BD0FC 100%) !important;
+  background-image: linear-gradient(to right top, #4345F0 0%, #6BD0FC 100%) !important;
         
 }
