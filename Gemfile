@@ -14,12 +14,16 @@ gem 'devise'
 gem 'haml-rails'
 gem 'pg'
 gem 'puma'
+gem 'instagram'
+gem "mongoid", "~> 4.0.0"
+
 group :development do
   gem 'better_errors'
   gem 'binding_of_caller', :platforms=>[:mri_20]
   gem 'html2haml'
   gem 'quiet_assets'
   gem 'rails_layout'
+  gem 'byebug'
 end
 group :production do
   gem 'rails_12factor'
