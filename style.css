@@ -353,6 +353,21 @@ a:hover{
 
 
 /* log-in */
+.login-text{
+  position:relative;
+  width:275px;
+  margin:10px 20px;
+  font-size:14px;
+}
+
+.login-text a{
+  color:#565a53;
+}
+
+.login-text a:hover{
+  color:#000;
+}
+
 .log-in-button{
   position:relative;
   width:275px;
