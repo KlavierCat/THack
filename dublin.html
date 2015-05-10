@@ -32,11 +32,11 @@
     <![endif]-->
   </head>
   <body>
-  
-  
-    
+
+
+
     <!-- >>>>> header >>>>> -->
-    <header id="top" role="banner">      
+    <header id="top" role="banner">
       <div class="navbar navbar-default navbar-fixed-top gradtop" role="navigation">
         <div class="container">
           <div class="navbar-header">
@@ -46,7 +46,7 @@
       </div>
     </header>
     <!-- <<<<< header <<<<< -->
-    
+
     <!-- >>>>> #home-image -->
     <section id="map-canvas">
     </section>
@@ -56,7 +56,7 @@
 
     <!-- footer >>>>> -->
     <footer id="footer" class="grad">
-      
+
       <div id="footer-copy">
         <div class="container">
           <div class="row">
@@ -66,22 +66,46 @@
           </div>
         </div>
       </div>
-    
+
     </footer>
     <!-- footer <<<<< -->
-    
-    
+
+
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
-    
-    <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA5Ck2xZhme7e51NC-hms4fqg0RsbAgiUs">
+
+    <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?libraries=places"></script>
+    <!--<script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA5Ck2xZhme7e51NC-hms4fqg0RsbAgiUs">-->
+
     </script>
 
     <script type="text/javascript">
 
-      var myCenter=new google.maps.LatLng(53.349381, -6.263025);
+      $.urlParam = function(name){
+        var results = new RegExp('[\?&amp;]' + name + '=([^&amp;#]*)').exec(window.location.href);
+        return results[1] || 0;
+      }
+      //var myCenter=new google.maps.LatLng(53.349381, -6.263025);
+      var lat = $.urlParam('lat');
+      var lon = $.urlParam('lon');
+      var myCenter = new google.maps.LatLng(lat, lon);
+      /*
+      map = new google.maps.Map(document.getElementById('map-canvas'), {
+        center: myCenter,
+        zoom: 15
+      });
 
-      var pickUpPoints =  [
+      var request = {
+        location: myCenter,
+        radius: 500,
+        types: ['amusement_park' , 'aquarium' , 'art_gallery']
+      };
+      infowindow = new google.maps.InfoWindow();
+      var service = new google.maps.places.PlacesService(map);
+      service.nearbySearch(request, callback);
+
+
+      var apickUpPoints =  [
         ["Ben Dunne Gym Carlisle", 53.3141678,-6.3031188, 1, 'mapIcon_1.png'],
         ["Church Fitness Dun Laoghaire", 53.2925857,-6.136111, 2, 'mapIcon_1.png'],
         ["Energie fitness Rathfarnham", 53.2899691,-6.2652004, 3, 'mapIcon_1.png'],
@@ -94,7 +118,7 @@
         ["Ben Dunne Gym Northwood", 53.3746436,-6.3028371, 10, 'mapIcon_1.png'],
         ["1escape Health Club", 53.3746436,-6.3028371, 11, 'mapIcon_1.png']
       ];
-
+*/
       function setMarkers(map, pickUpPoints){
         for (var i=0; i<pickUpPoints.length; i++){
           var pickUpPoint = pickUpPoints[i];
@@ -226,11 +250,38 @@
         map.mapTypes.set('map_style', styledMap);
         map.setMapTypeId('map_style');
 
-        setMarkers(map, pickUpPoints);
+        var request = {
+          location: myCenter,
+          radius: 500,
+          types: ['amusement_park' , 'aquarium' , 'art_gallery']
+        };
+        infowindow = new google.maps.InfoWindow();
+        var service = new google.maps.places.PlacesService(map);
+        service.nearbySearch(request, function (results, status) {
+          if (status == google.maps.places.PlacesServiceStatus.OK) {
+            //$("#placesToVisit").html("");
+            var pickUpPoints =  [];
+            for (var i = 0; i < results.length; i++) {
+              //console.log(results[i])
+
+              //$("#placesToVisit").append('<input type="checkbox" id="place' + i + '" >'+results[i].name+'</input><br />');
+              pickUpPoints[i] = [results[i].name, results[i].geometry.location.A, results[i].geometry.location.F, i, 'mapIcon_1.png'];
+            }
+            setMarkers(map, pickUpPoints);
+          }
+        }
+      );
+
+
+        //panpan setMarkers(map, pickUpPoints);
 
       };
 
-      initialize();      
+      initialize();
+
+
+
+
     </script>
 
   </body>

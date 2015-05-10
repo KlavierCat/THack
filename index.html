@@ -15,7 +15,6 @@
     <link rel="stylesheet" href="js/fancyBox/source/jquery.fancybox.css" type="text/css" media="screen"/>
     <link rel="stylesheet" href="js/fancyBox/source/helpers/jquery.fancybox-buttons.css" type="text/css" media="screen"/>
     <link rel="stylesheet" href="style.css?v=0.01">
-
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!--[if lt IE 9]>
       <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
@@ -23,11 +22,11 @@
     <![endif]-->
   </head>
   <body>
-  
-  
-    
+    <!-- This div is just to be able to use google maps api, no map is shown here-->
+    <div id="map-canvas"> </div>
+
     <!-- >>>>> header >>>>> -->
-    <header id="top" role="banner">      
+    <header id="top" role="banner">
       <div class="navbar navbar-default navbar-fixed-top gradtop" role="navigation">
         <div class="container">
           <div class="navbar-header">
@@ -56,7 +55,7 @@
       </div>
     </header>
     <!-- <<<<< header <<<<< -->
-    
+
     <!-- >>>>> #home-image -->
     <section id="home-image">
       <div class="container">
@@ -67,9 +66,9 @@
           </div>
         </div>
       </div>
-    
-      
-      
+
+
+
       <!-- #signup >>>>> -->
       <section id="signup" class="text-center">
         <div class="container">
@@ -84,12 +83,12 @@
 
               <div id="user-signup">
                 <p style="margin-bottom:30px"></p>
-                
+
                 <form>
                   <div class="row">
                     <div class="col-md-8 col-md-offset-2">
                       <div class="input-group">
-                      <input type="text" class="form-control" name="cm-jthrjr-jthrjr" placeholder="Enter Your Destination">
+                      <input type="text" class="form-control" name="cm-jthrjr-jthrjr" id="pac-input" placeholder="Enter Your Destination">
                       <span class="input-group-btn">
                         <button class="btn btn-wesavvy grad" type="submit">Look Up</button>
                       </span>
@@ -101,7 +100,7 @@
 
               <div id="gyms-signup" style="display:none">
                 <p style="margin-bottom:30px"><a class="various" href="#modal-login" style="text-decoration:underline">Log in to your social media accounts to receive tailored suggestions</a></p>
-                
+
                 <form>
                   <div class="row">
                     <div class="col-md-8 col-md-offset-2">
@@ -115,14 +114,14 @@
                   </div>
                 </form>
               </div>
-              
+
             </div>
           </div>
         </div>
       </section>
       <!-- <<<<< #signup -->
-      
-      
+
+
     </section>
     <!-- #home-image <<<<< -->
 
@@ -147,7 +146,7 @@
         </div>
       </div>
     </section>
- 
+
 <!--Log In
   ========================================
 -->
@@ -185,7 +184,7 @@
 
     <!-- footer >>>>> -->
     <footer id="footer" class="grad">
-      
+
       <div id="footer-copy">
         <div class="container">
           <div class="row">
@@ -195,17 +194,18 @@
           </div>
         </div>
       </div>
-    
+
     </footer>
     <!-- footer <<<<< -->
-    
-    
+
+
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
     <script src="js/tubular.js"></script>
     <script type="text/javascript" src="js/fancyBox/source/jquery.fancybox.pack.js"></script>
     <script type="text/javascript" src="js/fancyBox/source/helpers/jquery.fancybox-buttons.js"></script>
-    
+    <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?libraries=places"></script>
+    <script src="js/maps.js"></script>
     <script>
       jQuery(function ($) {
         // if movile device
@@ -249,6 +249,6 @@
         });
       });
     </script>
-    
+
   </body>
 </html>
