@@ -62,7 +62,7 @@
       <div class="container">
         <div class="row">
           <div class="col-md-8 col-md-offset-2 text-center">
-            <h1>Holiday Radar</h1>
+            <!--<h1>Holiday Radar</h1>-->
             <h2>Check out a potential destination or let us suggest a place for you based on your social media profiles</h2>
           </div>
         </div>
@@ -100,14 +100,15 @@
               </div>
 
               <div id="gyms-signup" style="display:none">
-                <!--<p style="margin-bottom:30px">Log in to your social media account to receive tailored suggestions</p>-->
+                <p style="margin-bottom:30px"><a class="various" href="#modal-login" style="text-decoration:underline">Log in to your social media accounts to receive tailored suggestions</a></p>
                 
                 <form>
                   <div class="row">
                     <div class="col-md-8 col-md-offset-2">
-                      <div class="input-group" style="margin-top:50px">
+                      <div class="input-group">
+                      <input type="text" class="form-control" name="cm-jthrjr-jthrjr" placeholder="Enter Keywords">
                       <span class="input-group-btn">
-                        <button class="btn btn-wesavvy grad" type="submit">Suggest me a place</button>
+                        <button class="btn btn-wesavvy grad" type="submit">Suggest</button>
                       </span>
                     </div>
                     </div>
@@ -216,14 +217,14 @@
         }
 
         // User click trigger
-        $('#know_trigger').click(function() {
-          $('#unknow_trigger').removeClass('active');
+        $('#user_trigger').click(function() {
+          $('#gym_trigger').removeClass('active');
           $('#gyms-signup').fadeOut(function(){
             $('#user-signup').fadeIn();
           });
         });
-        $('#unknow_trigger').click(function() {
-          $('#know_trigger').removeClass('active');
+        $('#gym_trigger').click(function() {
+          $('#user_trigger').removeClass('active');
           $('#user-signup').fadeOut(function(){
             $('#gyms-signup').fadeIn();
           });
