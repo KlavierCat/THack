@@ -7,13 +7,13 @@
 
 body {
   background: #F8F9FB;
-  font-family: 'helvetica', 'arial', sans-serif;
+  font-family: 'helvetica neue', 'helvetica', 'arial', sans-serif;
   font-size: 12px;
   -webkit-font-smoothing: subpixel-antialiased;
 }
 
 h1, h2, h3, h4, h5, h6 {
-  font-family: 'helvetica', 'arial', sans-serif;
+  font-family: 'helvetica neue', 'helvetica', 'arial', sans-serif;
 }
 
 
@@ -340,3 +340,66 @@ section {
 .navbar{
   background-color:transparent;
 }
+
+a{
+  text-decoration:none;
+  color:#ddd;
+}
+a:hover{
+  text-decoration:none;
+  cursor: pointer;
+  color: #fff;
+}
+
+
+/* log-in */
+.log-in-button{
+  position:relative;
+  width:275px;
+  height:42px;
+  margin:10px 20px;
+  padding:9px 27px;
+  border-color:#c4c4c4;
+  background:white;
+  color:#565a53;
+  border-radius:2px;
+  border:1px solid;
+  text-align:center;
+  vertical-align:middle;
+  font-weight:bold;
+  font-size:16px;
+  line-height:1.43;
+  display:block;
+}
+
+.log-in-button .icon-container{
+  margin-right:20px;
+}
+
+#login-facebook{
+  border-color:#3b5998;
+  border-bottom-color:#263a63;
+  background-color:#3b5998;
+  color:#fff;
+}
+
+#login-twitter{
+  background-color:#00B3F6;
+  color:#fff;
+}
+
+#login-instagram{
+  background-color:#DDCFBE; /*#4981B0;*/
+  border:none;
+}
+
+#login-instagram:hover{
+  color:#565a53;
+}
+
+#login-pinterest{
+  background-color:#BD1E23;
+  color:#fff;
+}
+
+

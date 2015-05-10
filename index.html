@@ -12,6 +12,8 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
     <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css"> -->
     <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="js/fancyBox/source/jquery.fancybox.css" type="text/css" media="screen"/>
+    <link rel="stylesheet" href="js/fancyBox/source/helpers/jquery.fancybox-buttons.css" type="text/css" media="screen"/>
     <link rel="stylesheet" href="style.css?v=0.01">
 
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
@@ -77,7 +79,7 @@
 
               <div class="btn-group" data-toggle="buttons">
                 <button id="user_trigger" type="radio" class="btn btn-primary btn-lg active">I know where I am going</button>
-                <button id="gym_trigger" type="radio" class="btn btn-primary btn-lg">Suggest me a place</button>
+                <button id="gym_trigger" type="radio" class="btn btn-primary btn-lg"><a class="various" href="#modal-login">Suggest me a place</a></button>
               </div>
 
               <div id="user-signup">
@@ -144,7 +146,37 @@
         </div>
       </div>
     </section>
-    
+ 
+<!--Log In
+  ========================================
+-->
+  <div style="display: none">
+    <div id="modal-login">
+      <div class="container">
+        <div class="row">
+          <a class="col-md-12 log-in-button" id="login-facebook">
+            <span class="icon-container"><i class="fa fa-facebook"></i></span> Log in with Facebook
+          </a>
+        </div>
+        <div class="row">
+          <a class="col-md-12 log-in-button" id="login-twitter">
+            <span class="icon-container"><i class="fa fa-twitter"></i></span> Log in with Twitter
+          </a>
+        </div>
+        <div class="row">
+          <a class="col-md-12 log-in-button" id="login-instagram">
+            <span class="icon-container"><i class="fa fa-instagram"></i></span> Log in with Instagram
+          </a>
+        </div>
+        <div class="row">
+          <a class="col-md-12 log-in-button" id="login-pinterest">
+            <span class="icon-container"><i class="fa fa-pinterest"></i></span> Log in with Pinterest
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+
     <!-- footer >>>>> -->
     <footer id="footer" class="grad">
       
@@ -165,6 +197,8 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
     <script src="js/tubular.js"></script>
+    <script type="text/javascript" src="js/fancyBox/source/jquery.fancybox.pack.js"></script>
+    <script type="text/javascript" src="js/fancyBox/source/helpers/jquery.fancybox-buttons.js"></script>
     
     <script>
       jQuery(function ($) {
@@ -190,6 +224,23 @@
           });
         });
 
+      });
+    </script>
+
+    <script>
+      $(document).ready(function(){
+        $(".various").fancybox({
+          maxWidth : 315,
+          mxHeight : 390,
+          fitToView : false,
+          width : '315px',
+          height: '390px',
+          autoSize : false,
+          closeClick : false,
+          openEffect : 'none',
+          closeEffect : 'none',
+          scrolling: 'no'
+        });
       });
     </script>
     
